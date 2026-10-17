@@ -260,7 +260,7 @@ section {
     box-shadow: none;
 }
 
-.about,
+section.about,
 .token,
 .roadmap,
 .Team,
@@ -272,6 +272,104 @@ section {
     border-radius: 24px;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.045), rgba(255, 255, 255, 0.018));
     box-shadow: var(--shadow);
+}
+
+.about-page > .about-banner {
+    display: block;
+    width: min(100% - 48px, 1200px);
+    max-height: 420px;
+    margin: 32px auto 0;
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+}
+
+.about-page section.about {
+    margin-top: 24px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+    align-items: center;
+    gap: clamp(28px, 6vw, 72px);
+}
+
+.about-content {
+    max-width: 680px;
+}
+
+.section-label {
+    display: inline-block;
+    margin-bottom: 14px;
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+}
+
+.about-content h2 {
+    display: block;
+    margin-bottom: 16px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.12;
+}
+
+.about-content h2 span {
+    color: var(--gold);
+}
+
+.about-content h2::after {
+    display: none;
+}
+
+.about-content p {
+    max-width: 600px;
+    font-size: 1.02rem;
+}
+
+.about-btn {
+    display: inline-flex;
+    min-height: 46px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 26px;
+    padding: 11px 20px;
+    border: 1px solid var(--gold);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #f0d184, #d3a94e);
+    color: #17130a;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.about-btn:hover {
+    transform: translateY(-2px);
+    background: var(--gold-light);
+    box-shadow: 0 10px 26px rgba(229, 189, 98, 0.18);
+}
+
+.about-card {
+    padding: clamp(24px, 4vw, 36px);
+    border: 1px solid rgba(229, 189, 98, 0.25);
+    border-radius: 20px;
+    background: linear-gradient(145deg, rgba(229, 189, 98, 0.1), var(--panel));
+    text-align: center;
+}
+
+.about-icon {
+    display: grid;
+    width: 64px;
+    height: 64px;
+    place-items: center;
+    margin: 0 auto 18px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: rgba(229, 189, 98, 0.1);
+    font-size: 1.8rem;
 }
 
 h2 {
@@ -486,6 +584,19 @@ li {
         margin-right: auto;
         margin-left: auto;
     }
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        max-width: none;
+    }
+
+    .about-page > .about-banner {
+        width: min(100% - 36px, 1200px);
+        max-height: 300px;
+    }
 }
 
 @media (max-width: 520px) {
@@ -523,7 +634,7 @@ li {
         flex: 1 1 100%;
     }
 
-    .about,
+    section.about,
     .token,
     .roadmap,
     .Team,
