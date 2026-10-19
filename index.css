@@ -690,6 +690,114 @@ li {
     margin-inline: auto;
 }
 
+/* ==========================
+   VISION & MISSION SECTION
+========================== */
+
+.vision-mission {
+    padding: 100px 8%;
+    background: #0b0b0b;
+    color: #ffffff;
+}
+
+.vision-mission-container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.vision-mission .section-label {
+    color: #d4af37;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 3px;
+}
+
+.vision-mission h2 {
+    text-align: center;
+    font-size: clamp(32px, 4vw, 48px);
+    margin: 15px 0 45px;
+}
+
+.vision-mission h2 span {
+    color: #d4af37;
+}
+
+/* VISION CARD */
+
+.vision-card,
+.mission-card {
+    background: #161616;
+    border: 1px solid #333333;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 25px;
+    transition: 0.3s ease;
+}
+
+.vision-card:hover,
+.mission-card:hover {
+    border-color: #d4af37;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.08);
+}
+
+.vision-card h3,
+.mission-card h3 {
+    color: #d4af37;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.vision-card p {
+    color: #cccccc;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+/* MISSION LIST */
+
+.mission-card ol {
+    padding-left: 25px;
+}
+
+.mission-card li {
+    color: #cccccc;
+    line-height: 1.8;
+    padding-left: 8px;
+    margin-bottom: 12px;
+}
+
+.mission-card li::marker {
+    color: #d4af37;
+    font-weight: bold;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 600px) {
+    .vision-mission {
+        padding: 70px 6%;
+    }
+
+    .vision-mission h2 {
+        margin-bottom: 30px;
+    }
+
+    .vision-card,
+    .mission-card {
+        padding: 22px;
+    }
+
+    .vision-card h3,
+    .mission-card h3 {
+        font-size: 21px;
+    }
+
+    .vision-card p,
+    .mission-card li {
+        font-size: 14px;
+    }
+}
 @media (max-width: 600px) {
     .token-card {
         grid-template-columns: 1fr;
